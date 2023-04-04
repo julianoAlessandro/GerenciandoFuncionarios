@@ -1,4 +1,4 @@
-
+package ProgramaFuncionario;
 
 public class Funcionario {
 	private double salario;
@@ -54,16 +54,16 @@ public class Funcionario {
 	@Override
     public String toString() {
         return "\nFuncionario{" +
-                "\nsalario=" + salario  +
+                "\nNome=" + nome  +
                 ", \nregistro='" + registro + '\'' +
                 ", \nestaAtivo ='" +  estaAtivo + '\'' +
-                ", \nnome='" + nome + '\'' +
+                ", \nSalario='" + salario + '\'' +
                    '}';
     }
 	
 	public void bonificar(double valor) {
 		double bonificar  = salario + valor;
-		System.out.println("Com uma bonificação de "+ valor + " reais" +"Seu novo salario será: " + bonificar);
+		System.out.println("Com uma bonificação de "+ valor + " reais " +" Seu novo salario será: " + bonificar);
 	 
 		
 	}
