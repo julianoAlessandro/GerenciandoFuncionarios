@@ -5,11 +5,15 @@ public class Funcionario {
 	private long registro;
 	private boolean estaAtivo;
 	private String nome;
-	public Funcionario(double salario, long registro, boolean estaAtivo, String nome) {
+	private String Departamento;
+	private String rg;
+	public Funcionario(double salario, long registro, boolean estaAtivo, String nome,String Departamento, String rg) {
 	this.salario = salario;
 	this.registro = registro;
 	this.estaAtivo = estaAtivo;
 	this.nome = nome;
+	this.Departamento = Departamento;
+	this. rg = rg;
 	}
 	
 	public double getSalario() {
@@ -48,15 +52,15 @@ public class Funcionario {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	private String Departamento;
-	private String rg;
-	
+
 	@Override
     public String toString() {
         return "\nFuncionario{" +
                 "\nNome=" + nome  +
                 ", \nregistro='" + registro + '\'' +
                 ", \nestaAtivo ='" +  estaAtivo + '\'' +
+                 ", \nDepartamento ='" + Departamento   + '\'' +
+                  ", \nRG ='" + rg   + '\'' +
                 ", \nSalario='" + salario + '\'' +
                    '}';
     }
@@ -68,7 +72,7 @@ public class Funcionario {
 		
 	}
 	public void imprimir() {
-		System.out.println("\nNome:" +nome+ "\nsalario:"+ salario+"\nregistro:"+registro+"\nEsta ativo?"+estaAtivo);
+		System.out.println("\nNome:" +nome+ "\nsalario:"+ salario + "\nSeu departamento é:" +Departamento+ "\nregistro:"+registro+"\nEsta ativo?"+estaAtivo+"\nRG:"+rg);
 	}
 
 
