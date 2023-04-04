@@ -54,14 +54,20 @@ public class GerenciarFuncionario {
 		System.out.println("=========Cadastro de Funcionarios======");
 		System.out.println("Informe seu salario:");
 		double salario = Double.parseDouble(leia.nextLine());
-		System.out.println("Informe o seu registro");
+		System.out.println("Informe o seu registro:");
 		long registro = Long.parseLong(leia.nextLine());
 		System.out.println("Está ativo?");
 		boolean estaAtivo = Boolean.parseBoolean(leia.nextLine());
 		System.out.println("Informe seu nome:");
 		String nome = (leia.nextLine());
+		System.out.println("Informe seu Departamento:");
+		String Departamento =(leia.nextLine());
+		System.out.println("Informe seu RG:");
+		String rg = (leia.nextLine());
+		System.out.println("Dados cadastrados com sucesso!");
+		System.out.println("==========================================");
 		
-		Funcionario funcionarios = new Funcionario(salario,registro,estaAtivo,nome);
+		Funcionario funcionarios = new Funcionario(salario,registro,estaAtivo,nome,Departamento,rg);
 		listFuncionarios.add(funcionarios);
 		
 	}
@@ -77,9 +83,7 @@ public class GerenciarFuncionario {
 				
 				
 			}
-			else {
-				System.out.println("registro não encotrado no Sistema");
-			}
+			
 			
 			
 		}
@@ -101,15 +105,7 @@ public class GerenciarFuncionario {
 				
 				
 			}
-			else {
-				
-				System.out.println("Registro não encontrado");
-				
-									
-					
-						
-					}
-			
+		
 			
 		}
 		
@@ -117,9 +113,9 @@ public class GerenciarFuncionario {
 	}
 	
 	public void  execBonificar() {
+		System.out.println("Informe o valor a ser depositado esse mes: ");
+		int num = Integer.parseInt(leia.nextLine());
 		for(Funcionario funcionarios: listFuncionarios) {
-			System.out.println("Informe o valor a ser depositado esse mes: ");
-			int num = Integer.parseInt(leia.nextLine());
 			funcionarios.bonificar(num);
 			
 		}
