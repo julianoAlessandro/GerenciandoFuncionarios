@@ -1,3 +1,4 @@
+package ProgramaFuncionario;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -70,30 +71,30 @@ public class GerenciarFuncionario {
 		long registro = Long.parseLong(leia.nextLine());
 		for(Funcionario funcionarios: listFuncionarios) {
 			if(funcionarios.getRegistro() == registro) {
-				System.out.println("Esses são os dados especificos da conta "+ funcionarios.getNome());
+				System.out.println("===============Esses são os dados especificos da conta "+ funcionarios.getNome());
 				funcionarios.imprimir();
-				break;
+				
 				
 				
 			}
 			else {
-				System.out.println("Registro inválido");
-				break;
-				
+				System.out.println("registro não encotrado no Sistema");
 			}
 			
 			
 		}
 		
+		
 	}
 	public void execBonificarUnico() {
-		System.out.println("Bem vindo ao Sistema de Bonificação unica escolha um funcionario para bonifcar:");
+		System.out.println("======================Bem vindo ao Sistema de Bonificação unica escolha um funcionario para bonifcar:==================");
 		System.out.println("Informe o registro do funcionario que deseja registrar:");
 		long registro = Long.parseLong(leia.nextLine());
 		for(Funcionario funcionarios: listFuncionarios) {
 			if(funcionarios.getRegistro() == registro) {
-				funcionarios.bonificar(200);
-				break;
+				System.out.println("Informe o valor a ser depostiado no cliente " + funcionarios.getNome());
+				int num = Integer.parseInt(leia.nextLine());				
+				funcionarios.bonificar(num);
 			
 				
 			
@@ -103,7 +104,7 @@ public class GerenciarFuncionario {
 			else {
 				
 				System.out.println("Registro não encontrado");
-				break;
+				
 									
 					
 						
@@ -117,7 +118,9 @@ public class GerenciarFuncionario {
 	
 	public void  execBonificar() {
 		for(Funcionario funcionarios: listFuncionarios) {
-			funcionarios.bonificar(300);
+			System.out.println("Informe o valor a ser depositado esse mes: ");
+			int num = Integer.parseInt(leia.nextLine());
+			funcionarios.bonificar(num);
 			
 		}
 		
@@ -127,7 +130,7 @@ public class GerenciarFuncionario {
 	public void execMostrarFuncionarios() {
 		System.out.println("====\nSegue abaixo os registros dos funcionarios:======");
 		for( int i = 0; i < listFuncionarios.size(); i++ ) {
-			System.out.println("\nEsses são seus dados dos funcionarios cadastrados: "+ listFuncionarios);
+			System.out.println("\nEsses são os  dados dos funcionarios cadastrados: "+ listFuncionarios);
 			
 			
 		}
