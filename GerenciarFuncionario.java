@@ -72,7 +72,13 @@ public class GerenciarFuncionario {
 			if(funcionarios.getRegistro() == registro) {
 				System.out.println("Esses são os dados especificos da conta "+ funcionarios.getNome());
 				funcionarios.imprimir();
+				break;
 				
+				
+			}
+			else {
+				System.out.println("Registro inválido");
+				break;
 				
 			}
 			
@@ -87,11 +93,21 @@ public class GerenciarFuncionario {
 		for(Funcionario funcionarios: listFuncionarios) {
 			if(funcionarios.getRegistro() == registro) {
 				funcionarios.bonificar(200);
+				break;
+			
 				
 			
 				
 				
 			}
+			else {
+				
+				System.out.println("Registro não encontrado");
+				break;
+									
+					
+						
+					}
 			
 			
 		}
@@ -100,7 +116,6 @@ public class GerenciarFuncionario {
 	}
 	
 	public void  execBonificar() {
-		System.out.println("Todos os funcionarios foram bonificados esse mes"); 
 		for(Funcionario funcionarios: listFuncionarios) {
 			funcionarios.bonificar(300);
 			
@@ -112,7 +127,7 @@ public class GerenciarFuncionario {
 	public void execMostrarFuncionarios() {
 		System.out.println("====\nSegue abaixo os registros dos funcionarios:======");
 		for( int i = 0; i < listFuncionarios.size(); i++ ) {
-			System.out.println("\nEsses são os dados dos funcionarios cadastrados: "+ listFuncionarios);
+			System.out.println("\nEsses são seus dados dos funcionarios cadastrados: "+ listFuncionarios);
 			
 			
 		}
