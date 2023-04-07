@@ -66,8 +66,8 @@ public class Funcionario {
     }
 	
 	public void bonificar(double valor) {
-		double bonificar  = salario + valor;
-		System.out.println("Com uma bonificação de "+ valor + " reais " +" Seu novo salario será: " + bonificar);
+		salario  = salario + valor;
+		System.out.println("Com uma bonificação de "+ valor + " reais " +" Seu novo salario será: " + salario);
 	 
 		
 	}
