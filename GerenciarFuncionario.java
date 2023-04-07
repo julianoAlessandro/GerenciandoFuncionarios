@@ -16,10 +16,10 @@ public class GerenciarFuncionario {
 		  System.out.println("================Bem vindo ao Menu de Escolhas============");
 		  System.out.println("===========================================================");
 		  System.out.println("Digite 1 para Cadastrar funcionarios");
-		  System.out.println("Digite 2 para Consultar um  funcionario especifico:");
+		  System.out.println("Digite 2 para Consultar um  funcionario especifico");
 		  System.out.println("Digite 3 para bonficar um unico funcionario");
 		  System.out.println("Digite 4 para bonficar todos os funcionarios");
-		  System.out.println("Digite 5 para Mostrar todos os funcionários:");
+		  System.out.println("Digite 5 para Mostrar todos os funcionários");
 		  System.out.println("Digite 9 para sair");
 		  opcao = Integer.parseInt(gf.leia.nextLine());// estamos evitando a buferização
 		  switch(opcao) {
@@ -87,7 +87,7 @@ public class GerenciarFuncionario {
 			
 			
 		}
-		
+		System.out.println("==================Fim da consulta===========");
 		
 	}
 	public void execBonificarUnico() {
@@ -109,7 +109,7 @@ public class GerenciarFuncionario {
 			
 		}
 		
-		
+		System.out.println("===========Fim da bonificação do funcionario============");
 	}
 	
 	public void  execBonificar() {
@@ -119,7 +119,7 @@ public class GerenciarFuncionario {
 			funcionarios.bonificar(num);
 			
 		}
-		
+		System.out.println("==========Bonificação realizada com sucesso!=====");
 		
 	}
 	
@@ -130,6 +130,7 @@ public class GerenciarFuncionario {
 			
 			
 		}
+		System.out.println("==========Fim da exibição dos funcionarios=====");
 	}
 
 
